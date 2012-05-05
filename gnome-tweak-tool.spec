@@ -1,7 +1,7 @@
 %define url_ver %(echo %{version} | cut -d "." -f -2)
 
 Name:		gnome-tweak-tool
-Version:	3.2.2
+Version:	3.3.4
 Release:	1
 Summary:	A tool to customize advanced GNOME 3 options
 Group:		Graphical desktop/GNOME
@@ -16,7 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
 BuildRequires:	pkgconfig(pygobject-3.0)
 
-Requires:		gnome-shell
+Requires:	gnome-shell
 
 %description
 GNOME Tweak Tool is an application for changing the advanced settings
