@@ -1,12 +1,12 @@
 %define url_ver %(echo %{version} | cut -d "." -f -2)
 
+Summary:	A tool to customize advanced GNOME 3 options
 Name:		gnome-tweak-tool
 Version:	3.6.1
-Release:	2
-Summary:	A tool to customize advanced GNOME 3 options
+Release:	3
 Group:		Graphical desktop/GNOME
 License:	GPLv3
-URL:		http://live.gnome.org/GnomeTweakTool
+Url:		http://live.gnome.org/GnomeTweakTool
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 Patch1:		gnome-tweak-tool-3.6.1-remove_lid_close_settings.patch
 BuildArch:	noarch
@@ -14,6 +14,7 @@ BuildArch:	noarch
 BuildRequires:	desktop-file-utils
 BuildRequires:	GConf2
 BuildRequires:	intltool
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
 BuildRequires:	pkgconfig(pygobject-3.0)
 
@@ -63,26 +64,5 @@ desktop-file-install \
 %{python_sitelib}/gtweak
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}
-%{_datadir}/icons/hicolor/*/*/*.png
-
-
-
-%changelog
-* Tue Oct 30 2012 Arkady L. Shane <ashejn@rosalab.ru> 3.6.1-1
-- update to 3.6.1
-
-* Tue Oct  9 2012 Arkady L. Shane <ashejn@rosalab.ru> 3.6.0-1
-- update to 3.6.0
-
-* Wed May 16 2012 Matthew Dawkins <mattydaw@mandriva.org> 3.4.0.1-1
-+ Revision: 799204
-- update to new version 3.4.0.1
-
-* Sat May 05 2012 Matthew Dawkins <mattydaw@mandriva.org> 3.3.4-1
-+ Revision: 796872
-- new version 3.3.4
-
-* Thu Mar 15 2012 Matthew Dawkins <mattydaw@mandriva.org> 3.2.2-1
-+ Revision: 785067
-- imported package gnome-tweak-tool
+%{_iconsdir}/hicolor/*/*/*.png
 
