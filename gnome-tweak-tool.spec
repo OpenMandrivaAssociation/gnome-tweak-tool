@@ -2,7 +2,7 @@
 
 Summary:	A tool to customize advanced GNOME 3 options
 Name:		gnome-tweak-tool
-Version:	3.6.1
+Version:	 3.17.1
 Release:	10
 Group:		Graphical desktop/GNOME
 License:	GPLv3
