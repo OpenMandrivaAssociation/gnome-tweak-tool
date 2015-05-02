@@ -55,7 +55,7 @@ Features:
 
 desktop-file-install \
 	--dir=%{buildroot}%{_datadir}/applications \
-	--remove-only-show-in=Unity \
+	--remove-only-show-in=Pantheon \
 	%{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f %{name}.lang
