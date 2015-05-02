@@ -2,13 +2,12 @@
 
 Summary:	A tool to customize advanced GNOME 3 options
 Name:		gnome-tweak-tool
-Version:	 3.17.1
-Release:	10
+Version:	3.17.1
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv3
 Url:		http://live.gnome.org/GnomeTweakTool
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch1:		gnome-tweak-tool-3.6.1-remove_lid_close_settings.patch
 BuildArch:	noarch
 
 BuildRequires:	desktop-file-utils
@@ -44,7 +43,7 @@ Features:
 %apply_patches
 
 %build
-%configure2_5x \
+%configure \
 	--build=%{_host}
 
 %make
