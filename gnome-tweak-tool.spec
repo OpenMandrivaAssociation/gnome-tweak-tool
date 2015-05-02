@@ -16,6 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
 BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
 
 Requires:	gnome-shell
 
