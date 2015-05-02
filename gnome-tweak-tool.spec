@@ -65,4 +65,7 @@ desktop-file-install \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}
 %{_iconsdir}/hicolor/*/*/*.png
+%{_libexecdir}/gnome-tweak-tool-lid-inhibitor
+%{_datadir}/appdata/gnome-tweak-tool.appdata.xml
+%{_datadir}/icons/hicolor/scalable/apps/gnome-tweak-tool-symbolic.svg
 
