@@ -11,7 +11,6 @@ Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/%{url_ver}/%{name}-%{vers
 BuildArch:	noarch
 
 BuildRequires:	desktop-file-utils
-BuildRequires:	GConf2
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
