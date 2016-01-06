@@ -1,4 +1,5 @@
 removed_sources:
+  gnome-tweak-tool-3.17.1.tar.xz: e10259f9104a2d5ca51569be2652a9f7ab64b0f8
   gnome-tweak-tool-3.6.1.tar.xz: 2deb40feaa216c8cba3b81a873edcca795c766e2
 sources:
-  gnome-tweak-tool-3.17.1.tar.xz: e10259f9104a2d5ca51569be2652a9f7ab64b0f8
+  gnome-tweak-tool-3.18.1.tar.xz: a26deda10b869d710a03239f90afb115c162dd62
