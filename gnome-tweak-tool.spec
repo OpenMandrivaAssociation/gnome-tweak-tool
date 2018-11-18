@@ -2,22 +2,26 @@
 
 Summary:	A tool to customize advanced GNOME 3 options
 Name:		gnome-tweak-tool
-Version:	3.18.1
-Release:	4
+Version:	3.27.3
+Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv3
 Url:		http://live.gnome.org/GnomeTweakTool
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
+BuildRequires:  GConf2
+BuildRequires:  meson
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:  python-devel
 
 Requires:	gnome-shell
+Requires:	python-gi
 
 %description
 GNOME Tweak Tool is an application for changing the advanced settings
@@ -39,32 +43,28 @@ Features:
   - Font anti-aliasing
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 
 %build
-%configure \
-	--build=%{_host}
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 %find_lang %{name}
 
-desktop-file-install \
-	--dir=%{buildroot}%{_datadir}/applications \
+desktop-file-install --dir=%{buildroot}%{_datadir}/applications \
 	--remove-only-show-in=Pantheon \
 	%{buildroot}%{_datadir}/applications/*.desktop
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING NEWS README
+%doc AUTHORS NEWS README.md
+%license LICENSES/*
 %{_bindir}/%{name}
-%{python_sitelib}/gtweak
+%{python3_sitelib}/gtweak/
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}
-%{_iconsdir}/hicolor/*/*/*.png
+%{_datadir}/icons/hicolor/*/apps/gnome-tweak-tool*.*
+%{_datadir}/metainfo/%{name}.appdata.xml
 %{_libexecdir}/gnome-tweak-tool-lid-inhibitor
-%{_datadir}/appdata/gnome-tweak-tool.appdata.xml
-%{_datadir}/icons/hicolor/scalable/apps/gnome-tweak-tool-symbolic.svg
 
