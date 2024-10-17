@@ -6,7 +6,7 @@ Version:	3.27.3
 Release:	4
 Group:		Graphical desktop/GNOME
 License:	GPLv3
-Url:		http://live.gnome.org/GnomeTweakTool
+Url:		https://live.gnome.org/GnomeTweakTool
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
